@@ -8,7 +8,7 @@ namespace EventHubProcessorNew1
     {
         private static void Main(string[] args)
         {
-            string eventHubConnectionString = "Endpoint=**************.servicebus.windows.net/;SharedAccessKeyName=AlertingListen;SharedAccessKey==**************.";
+            string eventHubConnectionString = "Endpoint=**************.servicebus.windows.net/;SharedAccessKeyName=alistener;SharedAccessKey==**************.";
             string eventHubName = "prd-=**************.-eh-01";
             string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=prdamsussccatsa01;AccountKey==**************;EndpointSuffix=core.windows.net";
 
@@ -18,7 +18,7 @@ namespace EventHubProcessorNew1
             EventProcessorHost eventProcessorHost = new EventProcessorHost(
                 eventProcessorHostName,
                 eventHubName,
-                "alerting",
+                "aing",
                 eventHubConnectionString,
                 storageConnectionString, "local-webjobs-eventhub"
                 );
